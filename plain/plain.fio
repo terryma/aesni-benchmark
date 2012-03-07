@@ -7,7 +7,7 @@ clocksource=clock_gettime ; The most accurate clock under Xen, best for write_bw
 randrepeat=0              ; Mostly useful for short-running experiments, but ensures randomness (not using the same RNG seed at the start)
 iodepth=2                ; Bump up queue depth.
 time_based
-runtime=10
+runtime=300
 write_bw_log
 
 [plain-write]
