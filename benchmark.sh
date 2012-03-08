@@ -3,6 +3,7 @@ names=( plain aesni )
 files=( /benchmark/test /benchmark-encrypted/test )
 length=${#names[@]}
 count=$1
+description=$2
 
 if [ -z $count ]
 then
@@ -10,7 +11,7 @@ then
 fi
 
 # create a directory for this test run
-dir=`date +"%Y_%m_%d_%H_%M"`
+dir="$description-"`date +"%Y_%m_%d_%H_%M"`
 mkdir $dir
 cd $dir
 
