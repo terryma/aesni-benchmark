@@ -4,13 +4,20 @@ direct=1
 ioengine=libaio
 clocksource=clock_gettime 
 randrepeat=0   
-iodepth=2     
+iodepth=20     
 time_based
 runtime=300
+numjobs=10
 
-[read1]
+[read]
 filename=/benchmark-encrypted/test
+rw=read
+rate_iops=500
+
+[write]
+filename=/benchmark-encrypted2/test
 rw=write
+rate_iops=50
 
 
 
