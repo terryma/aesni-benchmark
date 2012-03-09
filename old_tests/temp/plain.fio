@@ -1,5 +1,5 @@
 [global]
-filename=/dev/xvdb
+filename=/benchmark/test
 bs=16k
 direct=1
 ioengine=libaio
@@ -9,7 +9,7 @@ iodepth=2
 time_based
 runtime=300
 
-[read]
-rw=read
+[write]
+rw=write
 
 
