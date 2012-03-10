@@ -1,0 +1,28 @@
+aesni-read: (g=0): rw=read, bs=16K-16K/16K-16K, ioengine=libaio, iodepth=2
+fio 2.0.3
+Starting 1 process
+
+aesni-read: (groupid=0, jobs=1): err= 0: pid=2202
+  read : io=4687.4MB, bw=15999KB/s, iops=999 , runt=300004msec
+    slat (usec): min=12 , max=4110 , avg=16.59, stdev= 7.71
+    clat (usec): min=76 , max=17367 , avg=1826.67, stdev=891.57
+     lat (usec): min=727 , max=17384 , avg=1844.51, stdev=891.28
+    clat percentiles (usec):
+     |  1.00th=[ 1020],  5.00th=[ 1064], 10.00th=[ 1096], 20.00th=[ 1464],
+     | 30.00th=[ 1544], 40.00th=[ 1592], 50.00th=[ 1608], 60.00th=[ 1624],
+     | 70.00th=[ 1656], 80.00th=[ 1672], 90.00th=[ 3920], 95.00th=[ 4192],
+     | 99.00th=[ 4704], 99.50th=[ 4704], 99.90th=[ 4960]
+    bw (KB/s)  : min=15616, max=16384, per=100.00%, avg=16013.12, stdev=89.76
+    lat (usec) : 100=0.01%, 750=0.01%, 1000=0.33%
+    lat (msec) : 2=87.20%, 4=4.14%, 10=8.30%, 20=0.03%
+  cpu          : usr=0.86%, sys=3.55%, ctx=304064, majf=0, minf=42
+  IO depths    : 1=4.4%, 2=95.6%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=299990/w=0/d=0, short=r=0/w=0/d=0
+
+Run status group 0 (all jobs):
+   READ: io=4687.4MB, aggrb=15999KB/s, minb=16383KB/s, maxb=16383KB/s, mint=300004msec, maxt=300004msec
+
+Disk stats (read/write):
+  xvdf: ios=299843/0, merge=0/0, ticks=550378/0, in_queue=550367, util=99.46%

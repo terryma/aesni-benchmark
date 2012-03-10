@@ -1,6 +1,6 @@
 #!/bin/sh
 names=( plain aesni )
-files=( /benchmark/test /benchmark-encrypted/test )
+files=( /dev/xvdg /dev/xvdf )
 length=${#names[@]}
 count=$1
 description=$2

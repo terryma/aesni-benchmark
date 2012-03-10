@@ -1,15 +1,17 @@
 [global]
-filename=/benchmark/test
-bs=16k
+filename=/dev/xvdf
+bs=64k
 direct=1
 ioengine=libaio
 clocksource=clock_gettime 
 randrepeat=0             
-iodepth=2              
+iodepth=8
+#iodepth=2
 time_based
 runtime=300
 
 [write]
 rw=write
+
 
 

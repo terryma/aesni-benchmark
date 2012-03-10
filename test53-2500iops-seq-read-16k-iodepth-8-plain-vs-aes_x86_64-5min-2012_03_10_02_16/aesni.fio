@@ -1,5 +1,5 @@
 [global]
-filename=
+filename=/dev/xvdf
 bs=16k
 direct=1
 ioengine=libaio
@@ -7,10 +7,10 @@ clocksource=clock_gettime ; The most accurate clock under Xen, best for write_bw
 randrepeat=0              ; Mostly useful for short-running experiments, but ensures randomness (not using the same RNG seed at the start)
 iodepth=8                ; Bump up queue depth.
 time_based
-runtime=
+runtime=300
 write_bw_log
 
-[-read]
+[aesni-read]
 rw=read
 rate_iops=2500
 
