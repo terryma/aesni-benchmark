@@ -39,7 +39,7 @@ do
   # start sar that captures CPU and device activity per second
   sar -u -P ALL -p -d -o $name-sar.out 1 $count >/dev/null 2>&1 &
   echo "Started $name test on `date`"
-  fio --output=$name-fio.out $name.fio >/dev/null 2>&1 
+  fio --output=$name-fio.out $name.fio 
   echo "Stopped $name test on `date`"
   
   # convert the sar output
